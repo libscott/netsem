@@ -16,11 +16,9 @@ cabal-version:       >=1.8
 
 executable netsem
   main-is:           src/Netsem.hs
-  ghc-options:       -Wall -O2 -rtsopts
+  ghc-options:       -Wall -O2 -rtsopts -threaded
   ghc-prof-options:  -prof -O2 -auto-all
   build-depends:     base,
                      network >= 2.4.0.0,
-                     containers >= 0.4.0.0,
-                     SafeSemaphore == 0.9.0,
-                     bytestring == 0.10.0.2,
-                     fast-logger == 0.3.2
+                     containers == 0.5.0.0,
+                     bytestring == 0.10.0.2
